@@ -25,7 +25,7 @@ const Demo = () => {
 		}
 	}, []);
 
-	const handleSubmit = async (e) => {
+	const handleSubmit = async (e: any) => {
 		e.preventDefault();
 
 		const existingArticle = allArticles.find(
