@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import Hero from "./Components/Hero.tsx";
 import Demo from "./Components/Demo.tsx";
