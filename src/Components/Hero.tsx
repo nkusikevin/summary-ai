@@ -9,7 +9,7 @@ function Hero() {
 				<button
 					type='button'
 					onClick={() =>
-						window.open("https://github.com/TidbitsJS/Summize", "_blank")
+						window.open("https://github.com/nkusikevin/summary-ai", "_blank")
 					}
 					className='black_btn'>
 					GitHub
