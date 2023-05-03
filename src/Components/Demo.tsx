@@ -12,13 +12,12 @@ const Demo = () => {
 	const [copied, setCopied] = useState<any>("");
 
 	// RTK lazy query
-	const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
+	const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery<any>();
 
 	// Load data from localStorage on mount
 	useEffect(() => {
-		const articlesFromLocalStorage = JSON.parse(
-			localStorage.getItem("articles")
-		);
+		const articles: any = localStorage.getItem("articles");
+		const articlesFromLocalStorage = JSON.parse(articles);
 
 		if (articlesFromLocalStorage) {
 			setAllArticles(articlesFromLocalStorage);
@@ -29,7 +28,7 @@ const Demo = () => {
 		e.preventDefault();
 
 		const existingArticle = allArticles.find(
-			(item) => item.url === article.url
+			(item: any) => item.url === article.url
 		);
 
 		if (existingArticle) return setArticle(existingArticle);
@@ -73,7 +72,7 @@ const Demo = () => {
 					/>
 
 					<input
-						type='text'
+						type='url'
 						placeholder='Paste the article link'
 						value={article.url}
 						onChange={(e) => setArticle({ ...article, url: e.target.value })}

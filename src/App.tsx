@@ -5,8 +5,11 @@ import Demo from "./Components/Demo.tsx";
 
 function App() {
 	return (
-		<main className='main'>
-			<div className='gradient' />
+		<main>
+			<div className='main'>
+				<div className='gradient' />
+			</div>
+
 			<div className='app'>
 				<Hero />
 				<Demo />
